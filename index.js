@@ -2,23 +2,23 @@
 import './style.css';
 
 var btn = document.getElementById('top-btn');
-btn.addEventListener('mousedown', ()=> {
+btn.addEventListener('mousedown', () => {
   console.log('mouse down');
 });
-btn.addEventListener('mouseup', ()=> {
+btn.addEventListener('mouseup', () => {
   console.log('mouse up');
 });
-btn.addEventListener('click', ()=> {
+btn.addEventListener('click', () => {
   console.log('click event');
 });
-btn.addEventListener('dblclick', ()=> {
+btn.addEventListener('dblclick', () => {
   console.log('Double click event');
 });
 var over = document.getElementById('over');
 var move = document.getElementById('move');
 
 var overCount = 0;
-over.addEventListener('mouseover', ()=> {
+over.addEventListener('mouseover', () => {
   var countElement = document.querySelector('#over>p');
   overCount += 1;
   countElement.innerHTML = overCount;
@@ -26,8 +26,15 @@ over.addEventListener('mouseover', ()=> {
 });
 var enter = document.getElementById('enter');
 var enterCount = 0;
-enter.addEventListener('mouseenter', ()=> {
+enter.addEventListener('mouseenter', () => {
   var countElement = document.querySelector('#enter>p');
   enterCount += 1;
   countElement.innerHTML = enterCount;
+});
+var move = document.getElementById('move');
+var moveCount = 0;
+move.addEventListener('mousemove', function () {
+  var countElement = document.querySelector('#move>p');
+  moveCount += 1;
+  countElement.innerHTML = moveCount;
 });
